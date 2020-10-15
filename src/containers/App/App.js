@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import DarkTheme from "../../components/Themes/DarkTheme";
@@ -6,13 +6,17 @@ import LightTheme from "../../components/Themes/LightTheme";
 import Home from "../Home";
 import "../../styles/GlobalStyle.scss";
 
+export const ThemeContext = React.createContext('');
+
 
 function App() {
   const localTheme = localStorage.getItem('theme');
-  const [ theme, setTheme ] = useState( localTheme ? localTheme === 'dark' ? DarkTheme : LightTheme : DarkTheme)
+  const [ theme, setTheme ] = useState( localTheme || 'dark')
   return (
-    <ThemeProvider theme={theme}>
-      <Home/>
+    <ThemeProvider theme={theme === 'dark' ? DarkTheme : LightTheme}>
+      <ThemeContext.Provider value={ {changeTheme: setTheme, theme}} >
+        <Home />
+      </ThemeContext.Provider>
     </ThemeProvider>
   );
 }
