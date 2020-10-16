@@ -12,6 +12,11 @@ const DarkTheme = {
     colorBox: "#23242a",
     colorInput: "#ffffff",
     colorTitle: "#ffffff",
+    audioBackGround: "#0f0f10",
+    colorPlayIcon: "#ffffff",
   },
+  font: {
+    titleFont: "'Work Sans', sans-serif"
+  }
 };
 export default DarkTheme;

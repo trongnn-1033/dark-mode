@@ -5,7 +5,16 @@ export default styled.section`
   height: 100vh;
   padding: 25px 0 0 60px;
   background-color: ${(props) => props.theme.color.backGroundContent};
-  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 999px;
+  }
   & .content-header {
     display: flex;
     align-items: center;
@@ -79,6 +88,33 @@ export default styled.section`
     &__popular {
       width: calc(70% - 20px);
       margin-right: 40px;
+    }
+  }
+
+  @media all and (max-width: 1000px){
+    & .content-center {
+      flex-direction: column;
+      padding-bottom: 200px;
+      &__popular{
+        width: 100%;
+        margin-right: 0;
+      }
+      &__mood{
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media all and (max-width: 750px){
+    padding-left: 20px;
+    & .content-header {
+      padding-right: 20px;
+      &__search {
+        display: none;
+      }
+    }
+    & .content-center {
+      padding-right: 20px
     }
   }
 `;

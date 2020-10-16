@@ -11,6 +11,11 @@ const LightTheme = {
     itemSlideBarBorder: "#e6e6e6",
     colorBox: "#e5e5e5",
     colorInput: "#5e5f62",
+    audioBackGround: "#cecece ",
+    colorPlayIcon: "#5e5f62",
   },
+  font: {
+    titleFont: "'Work Sans', sans-serif"
+  }
 };
 export default LightTheme;
