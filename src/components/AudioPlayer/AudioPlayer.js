@@ -45,52 +45,26 @@ export default styled.div`
       position: relative;
       font-size: 2rem;
       padding: 0 35px;
+      cursor: pointer;
 
       i{
         width:15px;
       }
+
+      &:hover .audio-content__slider{
+        display: block;
+      }
     }
 
     &__slider {
+      display: none;
       position: absolute;
-      bottom: 300%;
-      left: -15%;
-      transform: rotate(-90deg);
-      input[type="range"] {
-        & {
-          -webkit-appearance: none;
-          width: 100%;
-          height: 25px;
-          background: red;
-          outline: none;
-          opacity: 0.7;
-          -webkit-transition: 0.2s;
-          transition: opacity 0.2s;
-        }
-
-        &:hover {
-          opacity: 1;
-        }
-
-        &::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 25px;
-          height: 25px;
-          background: blue;
-          cursor: pointer;
-        }
-        &::-ms-thumb {
-          background: yellow;
-        }
-
-          &::-moz-range-thumb {
-          width: 25px;
-          height: 25px;
-          background: yellow;
-          cursor: pointer;
-        }
-      }
+      bottom: 100%;
+      left: 50%;
+      height: 100px;
+      transform: translateX(-80%);
+      cursor: pointer;
+      
     }
 
     &__img {

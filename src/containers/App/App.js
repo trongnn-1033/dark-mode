@@ -5,6 +5,7 @@ import DarkTheme from "../../components/Themes/DarkTheme";
 import LightTheme from "../../components/Themes/LightTheme";
 import Home from "../Home";
 import "../../styles/GlobalStyle.scss";
+import 'rc-slider/assets/index.css';
 
 export const ThemeContext = React.createContext('');
 

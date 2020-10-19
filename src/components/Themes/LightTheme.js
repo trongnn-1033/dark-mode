@@ -13,6 +13,7 @@ const LightTheme = {
     colorInput: "#5e5f62",
     audioBackGround: "#cecece ",
     colorPlayIcon: "#5e5f62",
+    colorVolume: "#969696",
   },
   font: {
     titleFont: "'Work Sans', sans-serif"

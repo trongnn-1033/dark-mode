@@ -1,43 +1,41 @@
-const  reactInputSlider = (color) => {
+const  reactVolumeSlider = (color) => {
   return {
-    track: {
-      backgroundColor: color.colorBox,
-      width: '100% ',
-      height: "5px",
+    railStyle:{
+      backgroundColor: color.colorVolume,
+      width: 10,
     },
-    active: {
+    trackStyle:{
       backgroundColor: color.itemSideBar,
       boxShadow: ` 0 0 5px 0 ${color.itemSideBar} `,
-      height: "5px",
+      width: 10
     },
-    thumb: {
-      width: "8px",
-      height: "8px",
-      backgroundColor: color.itemSideBar,
-      borderRadius: '50%',
-    },
+    handleStyle:{
+      width: 0,
+      height: 0,
+      border: 0,
+    }
   }
 
 }
 
-const  reactVolumeSlider = (color) => {
+const  reactInputSlider = (color) => {
   return {
-    track: {
+    railStyle:{
       backgroundColor: color.colorBox,
-      width: '100px',
-      height: "10px",
+      height:5
     },
-    active: {
+    trackStyle:{
       backgroundColor: color.itemSideBar,
       boxShadow: ` 0 0 5px 0 ${color.itemSideBar} `,
-      height: "5px",
+      height: 5
     },
-    thumb: {
-      width: "8px",
-      height: "8px",
+    handleStyle:{
+      marginTop: -2,
+      width: 8,
+      height: 8,
+      border: 0,
       backgroundColor: color.itemSideBar,
-      borderRadius: '50%',
-    },
+    }
   }
 
 }

@@ -14,6 +14,7 @@ const DarkTheme = {
     colorTitle: "#ffffff",
     audioBackGround: "#0f0f10",
     colorPlayIcon: "#ffffff",
+    colorVolume: "#ffffff",
   },
   font: {
     titleFont: "'Work Sans', sans-serif"
